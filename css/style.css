@@ -1,44 +1,68 @@
-/* YeyeYeee código aquí */
+/* código */
 body {
 	background-color: black;
-	color: white;
+	color: #CCC;
 	font-family: 'Raleway', sans-serif;
+	/* reset */
+	margin: 0 auto;
+	padding: 0;
 }
-.principal {
-	background-color: #3e3f41;
-	height: 100vh;
-	padding-top: 5vh;
+.row .col{
+    padding: 0 !important;
+}
+/* materialize*/
+.btn, .btn-large {
+    text-decoration: none;
+    color: #666;
+    background-color: #f4a728;
+    text-align: center;
+    letter-spacing: .5px;
+    transition: .2s ease-out;
+    cursor: pointer;
+    width: 100%;
+    padding-top: 1vh;
+    height: 8vh;
+}
+.btn:hover, .btn-large:hover {
+    background-color: #f4a728;
+}
+.input-field {
+    position: relative;
+}
+/* base */
+.color01 {
 	color: #f4a728;
 }
-.logotipo-img {
-	width: 40%;
-	height: auto;
+.color02 {
+	color: white;
 }
 .uppercase {
 	text-transform: uppercase;
 	font-weight: bold;
 }
+/* index */
+.principal {
+	background-color: #3e3f41;/*background*/
+	height: 100vh;
+	padding-top: 12vh;
+}
+.logotipo-img {
+	width: 40%;
+	height: auto;
+}
 .user {
-	margin-top: 1vh;
+	margin-top: 8vh;
 	background-color: white;
 }
-.olvidate {
-	color: white;
-	margin-bottom: 50px;
-}
-.registrate {
+.cuenta {
 	position: fixed;
-	bottom: 0px;
+	bottom: 2vh;
 	width: 100%;
-	color: white;
+	text-align: center;
 }
-.color01 {
-	color: #f4a728;
-}
-.inicio {
-	box-shadow: none;
-    background-color: #f4a728;
-    color: #343434;
-    cursor: pointer;
-    transition: background-color .2s;
+/* pagina */
+.pagina {
+	background-color: #dddee0;/*background*/
+	height: 100vh;
+	padding-top: 30vh;
 }
