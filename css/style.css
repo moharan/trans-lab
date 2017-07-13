@@ -1,4 +1,44 @@
 /* YeyeYeee código aquí */
 body {
 	background-color: black;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+}
+.principal {
+	background-color: #3e3f41;
+	height: 100vh;
+	padding-top: 5vh;
+	color: #f4a728;
+}
+.logotipo-img {
+	width: 40%;
+	height: auto;
+}
+.uppercase {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.user {
+	margin-top: 1vh;
+	background-color: white;
+}
+.olvidate {
+	color: white;
+	margin-bottom: 50px;
+}
+.registrate {
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	color: white;
+}
+.color01 {
+	color: #f4a728;
+}
+.inicio {
+	box-shadow: none;
+    background-color: #f4a728;
+    color: #343434;
+    cursor: pointer;
+    transition: background-color .2s;
 }

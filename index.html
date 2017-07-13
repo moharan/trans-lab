@@ -9,9 +9,43 @@
 	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600" rel="stylesheet">
 	<!-- Compiled and minified CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+  <!-- iconos materialize -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+	<section id="principal" class="principal hide-on-med-and-up">
+		<div class="container">
+        <div class="row">
+	        <!-- logotipo -->
+	    	<div class="col s12 logotipo center-align">
+	      		<img class="logotipo-img" src="docs/imagen.png" alt="logotipo">
+	      		<h4 class="uppercase">TRANS-LAB</h4>
+	      	</div>
+      		<!-- user -->
+      		<div class="col s12 user center-align">
+	      		<div class="input-field col s12">
+          			<i class="material-icons prefix">perm_identity</i>
+          			<input id="icon_prefix" type="text" class="validate" placeholder="Correo electronico">
+        		</div>
+        		<div class="input-field col s12">
+          			<i class="material-icons prefix">lock_outline</i>
+          			<input id="icon_telephone" type="text" class="validate" placeholder="Contraseña">
+        		</div>
+        		<div>
+        			<a class="waves-effect waves-teal btn-flat inicio">INICIAR SESIÓN</a>
+        		</div>
+	      	</div>
+	      	<!-- password -->
+        	<div class="registrate">
+        		<h6 class="olvidate">¿Olvidate tu contraseña?</h6>
+        		<div class="uppercase center-align">
+        		<h6>¿no tienes cuenta? <span class="color01">registrate</span></h6>
+        		</div>
+			</div>
+	  </div>
+      </div>
+	</section>
 <!-- JAVASCRIPT es preferible como ultima linea en el body -->
 <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
