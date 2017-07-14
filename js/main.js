@@ -10,7 +10,11 @@ $( document ).ready(function() {
 	$('#iniciar').on('click', function (event) {
     validateForm();
 	});
-	// llamada botones en pagina.html
+	// llamada botones en menu
+	$('#home').on('click', function (event) {
+    console.log("home");
+    window.location.href = "pagina.html";
+	});
 	$('#saldo').on('click', function (event) {
     console.log("saldo");
 	});
@@ -23,5 +27,20 @@ $( document ).ready(function() {
 	$('#preguntas').on('click', function (event) {
     console.log("preguntas");
 	});
+	// llamada botones en pagina.html
+	$('#saldo-pag').on('click', function (event) {
+    console.log("saldo-pag");
+	});
+	$('#tarifa-pag').on('click', function (event) {
+    console.log("tarifa-pag");
+	});
+	$('#perfil-pag').on('click', function (event) {
+    console.log("perfil-pag");
+	});
+	$('#preguntas-pag').on('click', function (event) {
+    console.log("preguntas-pag");
+	});
+	// Initialize collapse button
+  	$(".button-collapse").sideNav();
 	/* Fin ready */
 });
