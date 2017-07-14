@@ -10,6 +10,22 @@ $( document ).ready(function() {
 	$('#iniciar').on('click', function (event) {
     validateForm();
 	});
+	// llamada API BIP
+	$.ajax({
+		url: 'http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=123456',
+		type: 'GET',
+		dataType: 'JSON',
+		//data: {param1: 'value1'},
+	})
+	.done(function() {
+		console.log("success");
+	})
+	.fail(function() {
+		console.log("error");
+	})
+	.always(function() {
+		console.log("complete");
+	});
 	// llamada botones en menu
 	$('#home').on('click', function (event) {
     console.log("home");
