@@ -119,7 +119,7 @@ nav {
 	margin-right: -10px;
 	margin-left: -10px;
 }
-.saldo {
+.saldo, .frecuentes {
 	background-color: #dddee0;/*background*/
 	height: 100vh;
 }
@@ -141,4 +141,31 @@ nav {
     padding-left: 2vh;
     margin-top: 1vh;
     height: 5vh;
+}
+/* frecuentes.html */
+.titulo02 {
+	margin-top: 60px;
+}
+ul li ul {
+   /* Resto de estilos... */
+   display: none;
+}
+.dato-pregunta {
+    background-color: white;
+    color: #666;
+    text-align: center;
+    width: 100%;
+    padding-top: 1vh;
+    margin-top: 3vh;
+    height: 5vh;
+    cursor: pointer;
+}
+.dato-respuesta {
+    background-color: #666;
+    color: #ccc;
+    text-align: center;
+    width: 100%;
+    padding-top: 1vh;
+    margin-top: 3vh;
+    height: auto;
 }

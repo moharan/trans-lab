@@ -48,5 +48,17 @@ $( document ).ready(function() {
 	$('#agregar-tarjeta').on('click', function (event) {
     console.log("agregar-tarjeta");
 	});
+	// preguntas frecuentes
+	// Muestra y oculta los menús
+   $('ul li:has(ul)').hover(
+      function(e) {
+         $(this).find('ul').css({display: "block"});
+         console.log("muestra");
+      },
+      function(e) {
+         $(this).find('ul').css({display: "none"});
+         console.log("desaparece");
+      }
+   );
 	/* Fin ready */
 });
