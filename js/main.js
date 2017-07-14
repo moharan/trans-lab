@@ -21,6 +21,7 @@ $( document ).ready(function() {
 	});
 	$('#tarifa').on('click', function (event) {
     console.log("tarifa");
+    window.location.href = "tarifa.html";
 	});
 	$('#perfil').on('click', function (event) {
     console.log("perfil");
@@ -37,6 +38,7 @@ $( document ).ready(function() {
 	});
 	$('#tarifa-pag').on('click', function (event) {
     console.log("tarifa-pag");
+    window.location.href = "tarifa.html";
 	});
 	$('#perfil-pag').on('click', function (event) {
     console.log("perfil-pag");
@@ -66,9 +68,17 @@ $( document ).ready(function() {
    	);
    	// llamada a resultado de saldo
 	$("#resp-saldo").hide();
-   	// llamada botones en saldo.html
+   	// llamada boton en saldo.html
 	$('#btn-ver').on('click', function (event) {
     	console.log("ver saldo");
+    	$("#resp-saldo").show();
+	});
+	// llamada a resultado de calcular
+	$("#resp-calcular").hide();
+	// llamada boton en tarifa.html
+	$('#btn-calcular').on('click', function (event) {
+    	console.log("calcular");
+    	$("#resp-calcular").show();
     	$("#resp-saldo").show();
 	});
 	/* Fin ready */

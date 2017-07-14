@@ -71,6 +71,10 @@ nav {
     height: 56px;
     line-height: 56px;
 }
+.card .card-content {
+    padding: 4px;
+    border-radius: 0 0 2px 2px;
+}
 /* base */
 .color01 {
 	color: #f4a728;
@@ -189,6 +193,7 @@ ul li ul {
     transition: .2s ease-out;
     cursor: pointer;
     padding-top: 1.5vh;
-    margin-top: 6vh;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
     height: 6vh;
 }

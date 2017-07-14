@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TRANS-LAB</title>
+	<!-- Viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600" rel="stylesheet">
+	<!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+  <!-- iconos materialize -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<nav>
+		<ul id="slide-out" class="side-nav">
+    	<li id="saldo"><a href="#!"><i class="material-icons">credit_card</i>Ver Saldo</a></li>
+    	<li id="tarifa"><a href="#!"><i class="material-icons" >playlist_add</i>Calcular Tarifa</a></li>
+    	<li id="perfil"><a href="#!"><i class="material-icons">supervisor_account</i>Perfil</a></li>
+    	<li id="preguntas"><a href="#!"><i class="material-icons">assignment</i>Preguntas Frecuentes</a></li>
+    	<li id="home"><a href="#!"><i class="material-icons">trending_flat</i>Home</a></li>
+  		</ul>
+  <a href="#" data-activates="slide-out" class="button-collapse titulo"><i class="material-icons titulo">menu</i><span class="uppercase titulo">TRANS-lab</span></a>
+	</nav>
+	<section id="saldo" class="saldo hide-on-med-and-up">
+		<div class="container">
+        <div class="row">
+	    	<div class="col s12 center-align">
+	    	<!-- contenido -->
+				<div class="input-field">
+	          		<input id="num-tarjeta" type="text" class="validate" placeholder="Número tarjeta">
+	        	</div>
+	        	<div class="col s6">
+	    			<select class="browser-default">
+	    				<option value="">Choose your tarifa</option>
+	    				<option value="1">Horario Alto: $740</option>
+	    				<option value="2">Horario Medio: $680</option>
+	    				<option value="3">Horario Bajo: $640</option>
+	    			</select>
+  				</div>
+  				<div class="col s6">
+	    			<select class="browser-default">
+	    				<option value="">Choose your tarjeta</option>
+	    				<option value="1">Tarjeta guardada 1</option>
+	    				<option value="2">Tarjeta guardada 2</option>
+	    				<option value="3">Tarjeta guardada 3</option>
+	    			</select>
+  				</div>
+				<div>
+	        	<a class="waves-effect waves-light btn-ver" id="btn-calcular">CALCULAR</a>
+	        	</div>
+	        	<!-- Calcular -->
+	        	<div class="container" id="resp-calcular">
+				    <div class="row">
+			        <div class="col s8 offset-s2">
+			          <div class="card bg01 darken-1">
+			            <div class="card-content white-text">
+			              <h6 class="card-title uppercase">Costo Pasaje</h6>
+			              <h4>$680</h4>
+			            </div>
+			          </div>
+			        </div>
+			      </div>
+	        	</div>
+	        	<!-- Saldo -->
+	        	<div class="container" id="resp-saldo">
+				    <div class="row">
+			        <div class="col s8 offset-s2">
+			          <div class="card bg01 darken-1">
+			            <div class="card-content white-text">
+			              <h6 class="card-title uppercase">Saldo total</h6>
+			              <h4>$1.480</h4>
+			            </div>
+			          </div>
+			        </div>
+			      </div>
+	        	</div>
+			</div>
+		</div>
+	    </div>
+	</section>
+<!-- JAVASCRIPT es preferible como ultima linea en el body -->
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
