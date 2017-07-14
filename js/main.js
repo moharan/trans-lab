@@ -64,9 +64,12 @@ $( document ).ready(function() {
          console.log("desaparece");
       }
    	);
+   	// llamada a resultado de saldo
+	$("#resp-saldo").hide();
    	// llamada botones en saldo.html
 	$('#btn-ver').on('click', function (event) {
-    console.log("ver saldo");
+    	console.log("ver saldo");
+    	$("#resp-saldo").show();
 	});
 	/* Fin ready */
 });
