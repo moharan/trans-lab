@@ -2,10 +2,34 @@
 $( document ).ready(function() {
 	//alert("hola");
 	function validateForm() {
-		console.log("working");
-		// llamada a la siguiente pagina
-		window.location.href = "pagina.html";
-	};
+		$(function() {
+			console.log("working");
+			var correo = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+			var numeros = /^([0-9])*$/;
+			var limite = limite < 8;
+			// datos desde formulario validacion vacios
+			$("span").fadeOut().remove();
+				if ($("#input-email").val() == "" || !correo.test($("#input-email").val())) {
+					$("#input-email").focus().after("<span>Ingrese un email correcto</span>");
+					return false;
+				}
+				// estoy validando que sean solo 8, no que maximo sean 8
+				if ($("#input-password").val() == ""|| !numeros.test($("#input-password").val()) || $("#input-password").val().length != 8){
+					$("#input-password").focus().after("<span>Ingrese un password</span>");
+					return false;
+				}
+				// llamada a la siguiente pagina
+				window.location.href = "pagina.html";
+				console.log("datos guardados");
+			});
+			// desaparece el mensaje cuando el usuario esta escribiendo información en el input
+			$("#input-email, #input-password").bind("blur keyup", function(){
+				if ($(this).val() != "") {
+            		$("span").fadeOut();
+            		return false;  
+        		}
+    		});
+}
 	// llamada al boton en index.html
 	$('#iniciar').on('click', function (event) {
     validateForm();
