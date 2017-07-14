@@ -1,19 +1,25 @@
 /* Código */
 $( document ).ready(function() {
 	//alert("hola");
+		//tryjs_hoisting
+		console.log("localStorage " + localStorage.correo);
+		$("#dato-usuario").append("<div class='dato-usuario'>" +
+	    "<h6>" + localStorage.correo + "</h6></div>" +
+		"</div>");
+		console.log("probando");
 	function validateForm() {
 		$(function() {
 			console.log("working");
 			var correo = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 			var numeros = /^([0-9])*$/;
-			var limite = limite < 8;
+			//var user = "";
 			// datos desde formulario validacion vacios
 			$("span").fadeOut().remove();
 				if ($("#input-email").val() == "" || !correo.test($("#input-email").val())) {
 					$("#input-email").focus().after("<span>Ingrese un email correcto</span>");
 					return false;
 				}
-				// estoy validando que sean solo 8, no que maximo sean 8
+				// estoy validando que sean solo 8  , no que maximo sean 8
 				if ($("#input-password").val() == ""|| !numeros.test($("#input-password").val()) || $("#input-password").val().length != 8){
 					$("#input-password").focus().after("<span>Ingrese un password</span>");
 					return false;
@@ -21,6 +27,7 @@ $( document ).ready(function() {
 				// llamada a la siguiente pagina
 				window.location.href = "pagina.html";
 				console.log("datos guardados");
+				localStorage.correo = $("#input-email").val();
 			});
 			// desaparece el mensaje cuando el usuario esta escribiendo información en el input
 			$("#input-email, #input-password").bind("blur keyup", function(){
@@ -29,20 +36,62 @@ $( document ).ready(function() {
             		return false;  
         		}
     		});
-}
+	}
 	// llamada al boton en index.html
 	$('#iniciar').on('click', function (event) {
     validateForm();
 	});
 	// llamada API BIP
+	var id = $("#num-tarjeta").val();
 	$.ajax({
-		url: 'http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=123456',
+		url: 'https://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=21342787',
+		//url: 'http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip='+ id +'',
 		type: 'GET',
 		dataType: 'JSON',
 		//data: {param1: 'value1'},
 	})
-	.done(function() {
+	.done(function(x) {
 		console.log("success");
+		// datos de saldo id especifico
+		console.log(x);
+		console.log(x.id);
+		console.log(x.estadoContrato);
+		console.log(x.saldoTarjeta);
+		console.log(x.fechaSaldo);
+		// llamada boton en saldo.html
+		$('#btn-ver').on('click', function (event) {
+    	console.log("ver saldo");
+    	$("#resp-saldo").show();
+    	$("#resp-saldo").append("<div class='row'>" +
+			        "<div class='col s8 offset-s2'>" +
+			          "<div class='card bg01 darken-1'>" +
+			            "<div class='card-content white-text'>" +
+			              "<h6 class='card-title uppercase'>Saldo total</h6>" +
+			              "<div id='cont-saldo'></div>" +
+			              "<h4 id='total'>" + x.saldoTarjeta + "</h4>" +
+			            "</div>" +
+			          "</div>" +
+			        "</div>" +
+			      "</div>");
+    	//$(this).attr("disabled", disable);
+		});
+		// llamada boton en tarifa.html
+		$('#btn-calcular').on('click', function (event) {
+    	console.log("calcular");
+    		$("#resp-calcular").show();
+    		$("#resp-saldo").show();
+    		$("#resp-saldo").append("<div class='row'>" +
+			        "<div class='col s8 offset-s2'>" +
+			          "<div class='card bg01 darken-1'>" +
+			            "<div class='card-content white-text'>" +
+			              "<h6 class='card-title uppercase'>Saldo total</h6>" +
+			              "<div id='cont-saldo'></div>" +
+			              "<h4 id='total'>" + x.saldoTarjeta + "</h4>" +
+			            "</div>" +
+			          "</div>" +
+			        "</div>" +
+			      "</div>");
+	});
 	})
 	.fail(function() {
 		console.log("error");
@@ -81,7 +130,7 @@ $( document ).ready(function() {
     window.location.href = "tarifa.html";
 	});
 	$('#perfil-pag').on('click', function (event) {
-    console.log("perfil-pag");
+    console.log("perfil");
     window.location.href = "perfil.html";
 	});
 	$('#preguntas-pag').on('click', function (event) {
@@ -108,18 +157,16 @@ $( document ).ready(function() {
    	);
    	// llamada a resultado de saldo
 	$("#resp-saldo").hide();
-   	// llamada boton en saldo.html
-	$('#btn-ver').on('click', function (event) {
-    	console.log("ver saldo");
-    	$("#resp-saldo").show();
+	// guardar tarjeta en saldo.html
+	$('#num-tarjeta').on('keyup()', function (event) {
+		if ($("#input-password").val() !== ""){
+					console.log("va a guardar");
+					var tarjeta = $("#input-password").val();
+					console.log(tarjeta);
+					return false;
+				}
 	});
 	// llamada a resultado de calcular
 	$("#resp-calcular").hide();
-	// llamada boton en tarifa.html
-	$('#btn-calcular').on('click', function (event) {
-    	console.log("calcular");
-    	$("#resp-calcular").show();
-    	$("#resp-saldo").show();
-	});
 	/* Fin ready */
 });
