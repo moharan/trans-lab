@@ -24,9 +24,11 @@ $( document ).ready(function() {
 	});
 	$('#perfil').on('click', function (event) {
     console.log("perfil");
+    window.location.href = "perfil.html";
 	});
 	$('#preguntas').on('click', function (event) {
     console.log("preguntas");
+    window.location.href = "frecuentes.html";
 	});
 	// llamada botones en pagina.html
 	$('#saldo-pag').on('click', function (event) {
@@ -38,19 +40,21 @@ $( document ).ready(function() {
 	});
 	$('#perfil-pag').on('click', function (event) {
     console.log("perfil-pag");
+    window.location.href = "perfil.html";
 	});
 	$('#preguntas-pag').on('click', function (event) {
     console.log("preguntas-pag");
+    window.location.href = "frecuentes.html";
 	});
 	// Initialize collapse button
   	$(".button-collapse").sideNav();
-  	// llamada botones en saldo.html
+  	// llamada botones en perfil.html
 	$('#agregar-tarjeta').on('click', function (event) {
     console.log("agregar-tarjeta");
 	});
 	// preguntas frecuentes
 	// Muestra y oculta los menús
-   $('ul li:has(ul)').hover(
+   	$('ul li:has(ul)').hover(
       function(e) {
          $(this).find('ul').css({display: "block"});
          console.log("muestra");
@@ -59,6 +63,10 @@ $( document ).ready(function() {
          $(this).find('ul').css({display: "none"});
          console.log("desaparece");
       }
-   );
+   	);
+   	// llamada botones en saldo.html
+	$('#btn-ver').on('click', function (event) {
+    console.log("ver saldo");
+	});
 	/* Fin ready */
 });

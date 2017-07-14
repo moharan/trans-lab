@@ -29,38 +29,27 @@
         <div class="row">
 	    	<div class="col s12 center-align">
 	    	<!-- contenido -->
-				<div class="input-field">
-	          		<input id="num-tarjeta" type="text" class="validate" placeholder="Número tarjeta">
-	        	</div>
-	        	<div>
-	    			<select class="browser-default">
-	    				<option value="">Choose your option</option>
-	    				<option value="1">Tarjeta guardada 1</option>
-	    				<option value="2">Tarjeta guardada 2</option>
-	    				<option value="3">Tarjeta guardada 3</option>
-	    			</select>
-  				</div>
-				<div>
-	        	<a class="waves-effect waves-light btn-ver" id="btn-ver">VER SALDO</a>
-	        	</div>
-	        	<!-- Saldo -->
-	        	<div class="container">
-				    <div class="row">
-			        <div class="col s8 offset-s2">
-			          <div class="card bg01 darken-1">
-			            <div class="card-content white-text">
-			              <h6 class="card-title uppercase">Saldo total</h6>
-			              <h4>$1.480</h4>
-			            </div>
-			          </div>
-			        </div>
-			      </div>
-	        	</div>
-	        	<!--<div class="col s10 offset-s1 center-align">
-	        		<div class="dato-usuario" id="dato-usuario">blanco@malumas.cl</div>-->
-			</div>
-		</div>
-	    </div>
+	    		<div class="user-view bg-01">
+      				<div class="col s6 offset-s3">
+        				<a href="#!user"><img class="responsive-img circle" src="docs/user.jpg"></a>
+      				</div>
+    			</div>
+    			<div class="col s10 offset-s1 center-align">
+	        		<div class="dato-usuario" id="dato-usuario">blanco@malumas.cl</div>
+				</div>
+				<div class="col s10 offset-s1 input-field">
+	          			<input id="num-tarjeta" type="text" class="validate" placeholder="Número tarjeta">
+	        		</div>
+	      		<div class="col s10 offset-s1 center-align">
+	        		<a class="waves-effect waves-light btn-trans" id="agregar-tarjeta">AGREGAR TARJETA</a>
+				</div>
+				<div class="col s10 offset-s1 center-align">
+	        		<div class="dato-tarjeta" id="dato-tarjeta">nª 12345678</div>
+				</div>
+				<div class="col s10 offset-s1 center-align">
+	        		<div class="dato-tarjeta" id="dato-tarjeta">nª 87654321</div>
+				</div>
+	      	</div>
 	</section>
 <!-- JAVASCRIPT es preferible como ultima linea en el body -->
 <script

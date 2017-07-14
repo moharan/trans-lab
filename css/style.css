@@ -10,6 +10,10 @@ body {
 .row .col{
     padding: 0 !important;
 }
+/* maquetacion */
+.red {
+	background-color: red;
+}
 /* materialize*/
 .btn, .btn-large {
     text-decoration: none;
@@ -73,6 +77,12 @@ nav {
 }
 .color02 {
 	color: white;
+}
+.bg01 {
+	background-color: #f4a728;
+}
+.bg02 {
+	background-color: #3e3f41;
 }
 .uppercase {
 	text-transform: uppercase;
@@ -168,4 +178,17 @@ ul li ul {
     padding-top: 1vh;
     margin-top: 3vh;
     height: auto;
+}
+.btn-ver {
+    text-decoration: none;
+    color: white;
+    width: 50%;
+    background-color: #f4a728;
+    text-align: center;
+    letter-spacing: .5px;
+    transition: .2s ease-out;
+    cursor: pointer;
+    padding-top: 1.5vh;
+    margin-top: 6vh;
+    height: 6vh;
 }
