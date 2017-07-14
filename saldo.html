@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TRANS-LAB</title>
+	<!-- Viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600" rel="stylesheet">
+	<!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+  <!-- iconos materialize -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<nav>
+		<ul id="slide-out" class="side-nav">
+    	<li id="saldo"><a href="#!"><i class="material-icons">credit_card</i>Ver Saldo</a></li>
+    	<li id="tarifa"><a href="#!"><i class="material-icons" >playlist_add</i>Calcular Tarifa</a></li>
+    	<li id="perfil"><a href="#!"><i class="material-icons">supervisor_account</i>Perfil</a></li>
+    	<li id="preguntas"><a href="#!"><i class="material-icons">assignment</i>Preguntas Frecuentes</a></li>
+    	<li id="home"><a href="#!"><i class="material-icons">trending_flat</i>Home</a></li>
+  		</ul>
+  <a href="#" data-activates="slide-out" class="button-collapse titulo"><i class="material-icons titulo">menu</i><span class="uppercase titulo">TRANS-lab</span></a>
+	</nav>
+	<section id="saldo" class="saldo hide-on-med-and-up">
+		<div class="container">
+        <div class="row">
+	    	<div class="col s12 center-align">
+	    	<!-- contenido -->
+	    		<div class="user-view bg-01">
+      				<div class="col s6 offset-s3">
+        				<a href="#!user"><img class="responsive-img circle" src="docs/user.jpg"></a>
+      				</div>
+    			</div>
+    			<div class="col s10 offset-s1 center-align">
+	        		<div class="dato-usuario" id="dato-usuario">blanco@malumas.cl</div>
+				</div>
+				<div class="col s10 offset-s1 input-field">
+	          			<input id="num-tarjeta" type="text" class="validate" placeholder="Número tarjeta">
+	        		</div>
+	      		<div class="col s10 offset-s1 center-align">
+	        		<a class="waves-effect waves-light btn-trans" id="agregar-tarjeta">AGREGAR TARJETA</a>
+				</div>
+				<div class="col s10 offset-s1 center-align">
+	        		<div class="dato-tarjeta" id="dato-tarjeta">nª 12345678</div>
+				</div>
+				<div class="col s10 offset-s1 center-align">
+	        		<div class="dato-tarjeta" id="dato-tarjeta">nª 87654321</div>
+				</div>
+	      	</div>
+	</section>
+<!-- JAVASCRIPT es preferible como ultima linea en el body -->
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

@@ -32,9 +32,10 @@ body {
     transition: .2s ease-out;
     cursor: pointer;
     width: 100%;
-    padding-top: 2vh;
-    margin-top: 2vh;
-    height: 7vh;
+    padding-top: 1.5vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    height: 6vh;
 }
 .btn:hover, .btn-large:hover {
     background-color: #f4a728;
@@ -107,4 +108,37 @@ nav {
 .titulo {
 	display: inline-flex;
 	margin-right: 100px;
+}
+/* saldo.html*/
+.bg-01 {
+	background-color: #f4a728;
+	width: auto;
+	height: 38vh;
+	padding-top: 4vh;
+	padding-bottom: 2vh;
+	margin-right: -10px;
+	margin-left: -10px;
+}
+.saldo {
+	background-color: #dddee0;/*background*/
+	height: 100vh;
+}
+.dato-usuario {
+    background-color: white;
+    color: #666;
+    text-align: center;
+    width: 100%;
+    padding-top: 1vh;
+    margin-top: 3vh;
+    height: 5vh;
+}
+.dato-tarjeta {
+    background-color: white;
+    color: #999;
+    text-align: left;
+    width: 100%;
+    padding-top: 1vh;
+    padding-left: 2vh;
+    margin-top: 1vh;
+    height: 5vh;
 }

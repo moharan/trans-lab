@@ -17,6 +17,7 @@ $( document ).ready(function() {
 	});
 	$('#saldo').on('click', function (event) {
     console.log("saldo");
+    window.location.href = "saldo.html";
 	});
 	$('#tarifa').on('click', function (event) {
     console.log("tarifa");
@@ -30,6 +31,7 @@ $( document ).ready(function() {
 	// llamada botones en pagina.html
 	$('#saldo-pag').on('click', function (event) {
     console.log("saldo-pag");
+    window.location.href = "saldo.html";
 	});
 	$('#tarifa-pag').on('click', function (event) {
     console.log("tarifa-pag");
@@ -42,5 +44,9 @@ $( document ).ready(function() {
 	});
 	// Initialize collapse button
   	$(".button-collapse").sideNav();
+  	// llamada botones en saldo.html
+	$('#agregar-tarjeta').on('click', function (event) {
+    console.log("agregar-tarjeta");
+	});
 	/* Fin ready */
 });
